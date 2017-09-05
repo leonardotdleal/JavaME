@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -5,35 +6,42 @@ import java.util.TimerTask;
 import javax.microedition.lcdui.Canvas;
 import javax.microedition.lcdui.Command;
 import javax.microedition.lcdui.Graphics;
+import javax.microedition.lcdui.Image;
+import javax.microedition.lcdui.game.Sprite;
 
 
 public class Game extends Canvas {
 	
-	private int x, y;
 	private TimerTask t;
 	private Timer t1;
 	private Random random;
 	private Sprite quadrado;
 	private Sprite seta;
 
-	public Game() {
+	public Game() throws IOException {
 		addCommand(new Command("VOLTAR", Command.BACK, 1));
 		
-		x = y = 10;
 		random = new Random();
+		
+		quadrado = new Sprite(Image.createImage("/quadrado.png"));
+		quadrado.setPosition(10, 10);
+		
+		seta = new Sprite(Image.createImage("/seta.png"));
+		seta.setRefPixelPosition(seta.getWidth()/2, seta.getHeight()/2);
+		seta.setPosition(100, 100);
 		
 		t = new TimerTask() {
 			public void run() {
 				int i = random.nextInt(80);
 				
 				if(i < 20) 
-					keyPressed(KEY_NUM2);
+					quadrado.move(0, -5);
 				else if(i < 40)
-					keyPressed(KEY_NUM8);
+					quadrado.move(0, 5);
 				else if(i < 60)
-					keyPressed(KEY_NUM4);
+					quadrado.move(-5, 0);
 				else if(i < 80)
-					keyPressed(KEY_NUM6);
+					quadrado.move(5, 0);
 			}
 		};
 		
@@ -45,23 +53,27 @@ public class Game extends Canvas {
 		g.setColor(0,200,200);
 		g.fillRect(0, 0, this.getWidth(), this.getHeight());
 		
-		g.setColor(0,0,0);
-		g.fillRect(x, y, 20, 20);
+		seta.paint(g);
+		quadrado.paint(g);
 	}
 	
 	protected void keyPressed(int keyCode) {
 		switch (keyCode) {
 		case KEY_NUM2:
-			this.y -= 5;
+			seta.setTransform(Sprite.TRANS_MIRROR_ROT270);
+			seta.move(0, -5);
 			break;
 		case KEY_NUM4:
-			this.x -= 5;
+			seta.setTransform(Sprite.TRANS_MIRROR_ROT90);
+			seta.move(-5, 0);
 			break;
 		case KEY_NUM6:
-			this.x += 5;
+			seta.setTransform(Sprite.TRANS_MIRROR_ROT180);
+			seta.move(5, 0);
 			break;
 		case KEY_NUM8:
-			this.y += 5;
+			seta.setTransform(Sprite.TRANS_NONE);
+			seta.move(0, 5);
 			break;
 		}
 		repaint();

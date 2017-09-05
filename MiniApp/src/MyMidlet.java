@@ -46,7 +46,11 @@ public class MyMidlet extends MIDlet implements CommandListener {
 			}
 			
 			notepad = new Notepad("Anotações");
-			game = new Game();
+			try {
+				game = new Game();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 			game.setTitle("Acertar o Quadrado.");
 			
 			//Setar o listener nas janelas.
