@@ -20,7 +20,7 @@ public class Notepad extends TextBox {
 		
 		this.setString(new String(bytes));
 		
-		for (int i = 1; i < rs.getNumRecords(); i++) {
+		for (int i = 1; i <= rs.getNumRecords(); i++) {
 			System.out.println(i + ") " + new String(rs.getRecord(i)));
 		}
 		
