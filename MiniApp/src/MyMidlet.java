@@ -21,15 +21,23 @@ public class MyMidlet extends MIDlet implements CommandListener {
 					this.notifyDestroyed();
 				}
 				else {
-					Displayable j = notepad;
-					if (menu.getSelection() == 1)
-						j = game;
-					
-					Display.getDisplay(this).setCurrent(j);
+					try {
+						notepad.carregarTexto();
+					} catch (Exception e) {
+						e.printStackTrace();
+					}					
+					Display.getDisplay(this).setCurrent(notepad);
 				}
 			}
 			if(janela == notepad){
-				
+				if (cmd.getCommandType() == Command.BACK) {
+					try {
+						notepad.armazenarTexto();
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					Display.getDisplay(this).setCurrent(menu);
+				}
 			}
 			if(janela == game){
 				if(cmd.getCommandType() == Command.BACK)
