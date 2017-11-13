@@ -2,7 +2,7 @@ MIDlet-1: MyMidlet,,MyMidlet
 MIDlet-2: Name,,Name
 MIDlet-3: Wellcome,,Wellcome
 MIDlet-4: Exit,,Exit
-MIDlet-Jar-Size: 2953
+MIDlet-Jar-Size: 2949
 MIDlet-Jar-URL: Prova2-Q1.jar
 MIDlet-Name: Prova2-Q1 Midlet Suite
 MIDlet-Vendor: Midlet Suite Vendor

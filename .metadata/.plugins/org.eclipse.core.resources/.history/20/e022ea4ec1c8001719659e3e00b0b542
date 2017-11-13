@@ -41,8 +41,9 @@ public class MyMidlet extends MIDlet implements CommandListener {
 		} else if((displayable == wellcome) && (command.getCommandType() == Command.OK)) {
 			exit.append("Obrigado e volte sempre Sr(a). " + name.getNome());
 			Display.getDisplay(this).setCurrent(exit);
-		} else if((displayable == exit) && (command.getCommandType() == Command.EXIT)) {
-			this.notifyDestroyed();
+		} else if((displayable == wellcome) && (command.getCommandType() == Command.EXIT)) {
+			wellcome.append("Olá Sr(a). " + name.getNome() + ". Seja bem-vindo.");
+			Display.getDisplay(this).setCurrent(wellcome);
 		}
 	}
 
