@@ -12,3 +12,71 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.resources 4 2 2017-11-13 20:56:06.371
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk 'C:\Users\Administrador\workspace\JavaME\Prova2-Q2\deployed'.
+	at org.eclipse.core.internal.resources.Folder.assertCreateRequirements(Folder.java:47)
+	at org.eclipse.core.internal.resources.Folder.create(Folder.java:95)
+	at org.eclipse.core.internal.resources.Folder.create(Folder.java:125)
+	at eclipseme.core.internal.preverification.builder.PreverificationBuilder.getDeploymentFolder(PreverificationBuilder.java:259)
+	at eclipseme.core.internal.preverification.builder.PreverificationBuilder.build(PreverificationBuilder.java:548)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:726)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.core.resources 4 272 2017-11-13 20:56:06.372
+!MESSAGE A resource already exists on disk 'C:\Users\Administrador\workspace\JavaME\Prova2-Q2\deployed'.
+!SUBENTRY 1 org.eclipse.core.resources 4 272 2017-11-13 20:56:06.372
+!MESSAGE A resource already exists on disk 'C:\Users\Administrador\workspace\JavaME\Prova2-Q2\deployed'.
+
+!ENTRY org.eclipse.core.resources 4 75 2017-11-13 20:56:06.379
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 eclipseme.core 4 75 2017-11-13 20:56:06.379
+!MESSAGE Errors running builder 'Preverification' on project 'Prova2-Q2'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk 'C:\Users\Administrador\workspace\JavaME\Prova2-Q2\deployed'.
+	at org.eclipse.core.internal.resources.Folder.assertCreateRequirements(Folder.java:47)
+	at org.eclipse.core.internal.resources.Folder.create(Folder.java:95)
+	at org.eclipse.core.internal.resources.Folder.create(Folder.java:125)
+	at eclipseme.core.internal.preverification.builder.PreverificationBuilder.getDeploymentFolder(PreverificationBuilder.java:259)
+	at eclipseme.core.internal.preverification.builder.PreverificationBuilder.build(PreverificationBuilder.java:548)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:726)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 2 org.eclipse.core.resources 4 272 2017-11-13 20:56:06.379
+!MESSAGE A resource already exists on disk 'C:\Users\Administrador\workspace\JavaME\Prova2-Q2\deployed'.
+!SUBENTRY 1 org.eclipse.core.resources 4 272 2017-11-13 20:56:06.379
+!MESSAGE A resource already exists on disk 'C:\Users\Administrador\workspace\JavaME\Prova2-Q2\deployed'.
+!SESSION 2017-11-13 21:07:27.479 -----------------------------------------------
+eclipse.buildId=M20130204-1200
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.mobile.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.mobile.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-11-13 21:07:31.595
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\udesc.CCTCC'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

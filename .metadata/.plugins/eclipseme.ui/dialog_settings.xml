@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="deviceManagementViewerSettings">
+		<item value="123" key="columnWidth_Configuration"/>
+		<item value="123" key="columnWidth_Name"/>
+		<item value="123" key="columnWidth_Group"/>
+		<item value="123" key="columnWidth_Profile"/>
+		<item value="55" key="columnWidth_Default"/>
+	</section>
+	<section name="NewMidletWizard">
+		<section name="NewMidletClass">
+			<item value="true" key="constructors"/>
+			<item value="true" key="addToJad"/>
+			<item value="true" key="unimplemented"/>
+		</section>
+	</section>
+	<section name="eclipseme.ui.internal.devices.DeviceImportWizard">
+		<item value="215" key="dialogHeight"/>
+		<item value="638" key="dialogWidth"/>
+		<section name="viewerSettings">
+			<item value="123" key="columnWidth_Configuration"/>
+			<item value="123" key="columnWidth_Name"/>
+			<item value="55" key="columnWidth_Import"/>
+			<item value="123" key="columnWidth_Group"/>
+			<item value="123" key="columnWidth_Profile"/>
+		</section>
+	</section>
+</section>
