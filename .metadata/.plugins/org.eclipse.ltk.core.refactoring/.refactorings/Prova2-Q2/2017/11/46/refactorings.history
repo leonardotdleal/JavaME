@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;Form.java&apos; to &apos;Form1.java&apos;&#x0D;&#x0A;- Original project: &apos;Prova2-Q2&apos;&#x0D;&#x0A;- Original element: &apos;Form.java&apos;&#x0D;&#x0A;- Renamed element: &apos;Form1.java&apos;" description="Rename compilation unit &apos;Form.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;{Form.java" name="Form1.java" references="false" stamp="1510612029066" version="1.0"/>
+</session>

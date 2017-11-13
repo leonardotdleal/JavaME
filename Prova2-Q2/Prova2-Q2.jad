@@ -1,0 +1,8 @@
+MIDlet-1: MyMidlet,,MyMidlet
+MIDlet-2: Form,,Form
+MIDlet-Jar-URL: Prova2-Q2.jar
+MIDlet-Name: Prova2-Q2 Midlet Suite
+MIDlet-Vendor: Midlet Suite Vendor
+MIDlet-Version: 1.0.0
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0
