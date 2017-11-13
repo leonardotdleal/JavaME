@@ -1,0 +1,47 @@
+import javax.microedition.lcdui.Command;
+import javax.microedition.lcdui.CommandListener;
+import javax.microedition.lcdui.Display;
+import javax.microedition.lcdui.Displayable;
+import javax.microedition.midlet.MIDlet;
+import javax.microedition.midlet.MIDletStateChangeException;
+
+
+public class MyMidlet extends MIDlet implements CommandListener {
+	
+	private Name name = new Name();
+	private Wellcome wellcome = new Wellcome();
+	private Exit exit = new Exit();
+
+	public MyMidlet() {
+		// TODO Auto-generated constructor stub
+	}
+
+	protected void destroyApp(boolean arg0) throws MIDletStateChangeException {
+		// TODO Auto-generated method stub
+
+	}
+
+	protected void pauseApp() {
+		// TODO Auto-generated method stub
+
+	}
+
+	protected void startApp() throws MIDletStateChangeException {
+		// TODO Auto-generated method stub
+		name.setCommandListener(this);
+		wellcome.setCommandListener(this);
+		exit.setCommandListener(this);
+		Display.getDisplay(this).setCurrent(name);
+	}
+	
+	public void commandAction(Command command, Displayable displayable) {
+		if((displayable == name) && (command.getCommandType() == Command.OK)) {
+			wellcome.append("Olá Sr(a). " + name.getNome() + ". Seja bem-vindo.");
+			Display.getDisplay(this).setCurrent(wellcome);
+		} else if((displayable == wellcome) && (command.getCommandType() == Command.OK)) {
+			exit.append("Obrigado e volte sempre Sr(a). " + name.getNome());
+			Display.getDisplay(this).setCurrent(exit);
+		}
+	}
+
+}
