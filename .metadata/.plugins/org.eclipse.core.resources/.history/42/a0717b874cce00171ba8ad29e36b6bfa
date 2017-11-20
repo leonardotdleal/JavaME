@@ -1,0 +1,26 @@
+import javax.microedition.lcdui.Graphics;
+
+
+public class Picture {
+	
+	public int x, xant;
+	public int y, yant;
+	private int color;
+
+	private static final int VERMELHA = 0xFF0000;
+	
+	public Picture(int width, int height) {
+		x = width/2;
+		y = height/2;
+		color = VERMELHA;
+	}
+	
+	public void paint(Graphics graphics) {
+		graphics.setColor(color);
+		graphics.drawString("#", x, y, Graphics.TOP|Graphics.LEFT);
+	}
+
+	public void setColorRed() {
+		this.color = VERMELHA;
+	}
+}

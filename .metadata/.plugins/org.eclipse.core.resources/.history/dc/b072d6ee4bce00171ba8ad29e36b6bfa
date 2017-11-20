@@ -1,0 +1,36 @@
+import javax.microedition.lcdui.Graphics;
+
+
+public class Picture {
+	
+	public int x;
+	public int y;
+	private int color;
+
+	private static final int VERMELHA = 0xFF0000;
+	
+	private static final int SQUARE = 0;
+	
+	private int form;
+	
+	public Picture(int width, int height) {
+		x = width/2;
+		y = height/2;
+		color = VERMELHA;
+		form = SQUARE;
+	}
+	
+	public void paint(Graphics graphics) {
+		graphics.setColor(color);
+		graphics.fillRect(x, y, 20, 20);
+		//graphics.drawString(x, y, graphics.getClipWidth(), graphics.getClipWidth());
+	}
+	
+	public void setForm() {
+		this.form = SQUARE;
+	}
+
+	public void setColorRed() {
+		this.color = VERMELHA;
+	}
+}

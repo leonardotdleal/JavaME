@@ -1,0 +1,20 @@
+import javax.microedition.lcdui.Graphics;
+import javax.microedition.lcdui.game.GameCanvas;
+
+
+public class MyCanvas extends GameCanvas {
+	
+	public MyCanvas() {
+		super(false);
+		setTitle("");
+	}
+	
+	private int cursorX, cursorY;
+	
+	public void paint(Graphics g) {
+		g.setColor(0,0,0);
+		g.fillRect(0,0,getWidth(), getHeight());
+		g.drawString("#", cursorX, cursorY, getWidth()/2, getHeight()/2);
+	}
+
+}

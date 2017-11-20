@@ -80,3 +80,124 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2017-11-20 20:52:45.067 -----------------------------------------------
+eclipse.buildId=M20130204-1200
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.mobile.product -product org.eclipse.epp.package.mobile.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.mobile.product -data C:\Users\udesc.CCTCC\Desktop\git\JavaME -product org.eclipse.epp.package.mobile.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-11-20 20:52:46.018
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-11-20 20:53:09.047
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\udesc.CCTCC'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.resources 4 2 2017-11-20 21:15:28.095
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NoClassDefFoundError: javax/microedition/lcdui/Canvas
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(Unknown Source)
+	at java.security.SecureClassLoader.defineClass(Unknown Source)
+	at java.net.URLClassLoader.defineClass(Unknown Source)
+	at java.net.URLClassLoader.access$100(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at eclipseme.preverifier.internal.PreverificationClassNode.getTypeClass(PreverificationClassNode.java:277)
+	at eclipseme.preverifier.internal.PreverificationClassNode.validateType(PreverificationClassNode.java:348)
+	at eclipseme.preverifier.internal.PreverifierMethodNode.isDisallowedType(PreverifierMethodNode.java:295)
+	at eclipseme.preverifier.internal.PreverifierMethodNode.visitLocalVariable(PreverifierMethodNode.java:185)
+	at org.objectweb.asm.ClassReader.accept(Unknown Source)
+	at org.objectweb.asm.ClassReader.accept(Unknown Source)
+	at eclipseme.preverifier.ClassPreverifier.preverify(ClassPreverifier.java:84)
+	at eclipseme.preverifier.ClassPreverifier.preverify(ClassPreverifier.java:61)
+	at eclipseme.core.internal.preverifier.EmbeddedPreverifier.preverify(EmbeddedPreverifier.java:287)
+	at eclipseme.core.internal.preverifier.EmbeddedPreverifier.preverify(EmbeddedPreverifier.java:192)
+	at eclipseme.core.model.impl.MidletSuiteProject.preverify(MidletSuiteProject.java:442)
+	at eclipseme.core.internal.preverification.builder.ResourceDeltaBuilder.handleClassAddsAndChanges(ResourceDeltaBuilder.java:817)
+	at eclipseme.core.internal.preverification.builder.ResourceDeltaBuilder.handleNullDelta(ResourceDeltaBuilder.java:934)
+	at eclipseme.core.internal.preverification.builder.ResourceDeltaBuilder.build(ResourceDeltaBuilder.java:343)
+	at eclipseme.core.internal.preverification.builder.PreverificationBuilder.preverifyProject(PreverificationBuilder.java:956)
+	at eclipseme.core.internal.preverification.builder.PreverificationBuilder.build(PreverificationBuilder.java:489)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:726)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.lang.ClassNotFoundException: javax.microedition.lcdui.Canvas
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 41 more
+
+!ENTRY org.eclipse.core.resources 4 75 2017-11-20 21:15:28.180
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 eclipseme.core 4 75 2017-11-20 21:15:28.180
+!MESSAGE Errors running builder 'Preverification' on project 'canvas'.
+!STACK 0
+java.lang.NoClassDefFoundError: javax/microedition/lcdui/Canvas
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(Unknown Source)
+	at java.security.SecureClassLoader.defineClass(Unknown Source)
+	at java.net.URLClassLoader.defineClass(Unknown Source)
+	at java.net.URLClassLoader.access$100(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at eclipseme.preverifier.internal.PreverificationClassNode.getTypeClass(PreverificationClassNode.java:277)
+	at eclipseme.preverifier.internal.PreverificationClassNode.validateType(PreverificationClassNode.java:348)
+	at eclipseme.preverifier.internal.PreverifierMethodNode.isDisallowedType(PreverifierMethodNode.java:295)
+	at eclipseme.preverifier.internal.PreverifierMethodNode.visitLocalVariable(PreverifierMethodNode.java:185)
+	at org.objectweb.asm.ClassReader.accept(Unknown Source)
+	at org.objectweb.asm.ClassReader.accept(Unknown Source)
+	at eclipseme.preverifier.ClassPreverifier.preverify(ClassPreverifier.java:84)
+	at eclipseme.preverifier.ClassPreverifier.preverify(ClassPreverifier.java:61)
+	at eclipseme.core.internal.preverifier.EmbeddedPreverifier.preverify(EmbeddedPreverifier.java:287)
+	at eclipseme.core.internal.preverifier.EmbeddedPreverifier.preverify(EmbeddedPreverifier.java:192)
+	at eclipseme.core.model.impl.MidletSuiteProject.preverify(MidletSuiteProject.java:442)
+	at eclipseme.core.internal.preverification.builder.ResourceDeltaBuilder.handleClassAddsAndChanges(ResourceDeltaBuilder.java:817)
+	at eclipseme.core.internal.preverification.builder.ResourceDeltaBuilder.handleNullDelta(ResourceDeltaBuilder.java:934)
+	at eclipseme.core.internal.preverification.builder.ResourceDeltaBuilder.build(ResourceDeltaBuilder.java:343)
+	at eclipseme.core.internal.preverification.builder.PreverificationBuilder.preverifyProject(PreverificationBuilder.java:956)
+	at eclipseme.core.internal.preverification.builder.PreverificationBuilder.build(PreverificationBuilder.java:489)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:726)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.lang.ClassNotFoundException: javax.microedition.lcdui.Canvas
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 41 more
